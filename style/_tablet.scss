@@ -1,0 +1,17 @@
+@media screen and (min-width: 750px) {
+  .hero{
+    .eve, .lina{
+      display: none;
+    }
+    .evelina{
+      display: block;
+    }
+    .about{
+      display: block;
+    }
+    .hero-flex{
+      display: flex;
+      flex-direction: row-reverse;
+    }
+  }
+}
