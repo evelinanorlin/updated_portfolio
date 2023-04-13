@@ -94,31 +94,98 @@ nav{
 
   img{
     animation: rotation 15s infinite linear;
+    position: relative;
+    z-index: 4;
   }
+
   .burger{
-    cursor: pointer;
-  
-    div{
+    height: 30px;
+    position: fixed;
+    right: 10px;
+    z-index: 4;
+    .burger-line{
       display: block;
-      height: 5px;
       width: 50px;
-      margin-bottom: 10px;
+      height: 3px;
       background: $dark;
-    }
-  
-    .middle-burger-line{
-      position: relative;
-      right: 10px;
-      transition: all 0.3s;
-    }
-    
-    &:hover{
-      .middle-burger-line{
-        right: 0;
+      transition: all .5s ease-in-out;
+      border: 1px solid $light;
+
+      &::before,
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0px;
+        display: block;
+        width: 50px;
+        height: 3px;
+        background: $dark;
+        transition: all .5s ease-in-out;
+        border: 1px solid $light;
+        }
+
+      &::before{
+        //top: 7px;
+        transform: translateY(-25px);
+      }
+
+      &::after{
+        //bottom: 10px;
+        transform: translateY(25px);
+      }
+  }
+}
+.open{
+  .burger-line{
+      transform: translateX(-50px);
+      background: transparent;
+      border: none;
+
+      &::before{
+         transform: rotate(45deg) translate(35px, -35px); 
+         border: none;
+      }
+
+      &::after{
+          transform: rotate(-45deg) translate(35px, 35px); 
+          border: none;
       }
     }
   }
+
+  .open-menu{
+    background: $light;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 3;
+    border: 1px solid $dark;
+
+    .nav-links-mob{
+      position: relative;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: 130px;
+
+      a{
+        margin: 0 auto;
+        color: $dark;
+        font-family: 'Lato', sans-serif;
+        text-decoration: none;
+        font-size: 1.5rem;
+        margin-bottom: 64px;
+      }
+    }
+  }
+  .closed-menu{
+    top: -100%;
+  }
 }
+
+
 
 // hero
 .hero{
