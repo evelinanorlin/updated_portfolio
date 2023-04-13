@@ -88,6 +88,18 @@
     h2{
       margin-top: -420px;
     }
+    .portfolio-container{
+      .odd{
+        img{
+          margin-right: 32px;
+        }
+      }
+      .even{
+        img{
+          margin-left: 32px;
+        }
+      }
+    }
   }
 
   .contact{

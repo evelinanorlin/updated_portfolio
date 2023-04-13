@@ -79,6 +79,29 @@
     .divider-line{
       margin-left: 90px;
     }
+
+    .portfolio-container{
+      img{
+        width: 50%;
+      }
+      .odd, .even{
+        display: flex;
+        align-items: center;
+      }
+      .odd{
+        text-align: left;
+        img{
+          margin-right: 16px;
+        }
+      }
+      .even{
+        flex-direction: row-reverse;
+        text-align: right;
+        img{
+          margin-left: 16px;
+        }
+      }
+    }
   }
 
   .contact{
