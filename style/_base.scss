@@ -1,5 +1,6 @@
 $light: #fffff0;
 $dark: #222222;
+$accent: #B2E0DC;
 
 // general
 body{
@@ -39,6 +40,10 @@ p{
   line-height: 1.6rem;
 }
 
+nav{
+  display: none;
+}
+
 .dark-button, .light-button{
   font-family: 'Lato', sans-serif;
   text-transform: uppercase;
@@ -47,6 +52,13 @@ p{
   font-weight: 200;
   margin-top: 0;
   padding: 10px 20px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover{
+    background: $accent;
+    color: $dark;
+  }
 }
 
 .dark-button{
@@ -79,6 +91,10 @@ p{
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  img{
+    animation: rotation 15s infinite linear;
+  }
   .burger{
     cursor: pointer;
   
@@ -222,12 +238,23 @@ p{
     text-decoration: none;
     cursor: pointer;
     margin-bottom: 64px;
+    transition: all 0.3s;
+  
+    &:hover{
+      background: $accent;
+      color: $dark;
+    }
   }
 
   .socials{
     color: $light;
     font-size: 3rem;
     margin: 0 16px;
+    transition: all 0.3s;
+
+    &:hover{
+      color: $accent;
+    }
   }
 }
 
@@ -243,6 +270,7 @@ footer{
     height: 150px;
     width: auto;
     margin: 0 auto;
+    animation: rotation 15s infinite linear;
   }
 
   .copywright{
@@ -261,7 +289,12 @@ footer{
       a{
         display: block;
         color: $light;
-        font-family: 'Lato', sans-serif;;
+        font-family: 'Lato', sans-serif;
+        transition: all 0.3s;
+
+        &:hover{
+          color: $accent;
+        }
       }
   
       .footer-menu-flex{
@@ -289,6 +322,15 @@ footer{
           margin: 0 8px;
         }
       }
+    }
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-359deg);
     }
   }
 

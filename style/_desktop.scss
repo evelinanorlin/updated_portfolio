@@ -1,0 +1,105 @@
+
+@media screen and (min-width: 1100px) {
+  h2{
+    font-size: 6rem;
+  }
+
+  .content{
+    width: 80%;
+  }
+  .top-bar{
+    display: none;
+  }
+
+  nav{
+    display: block;
+
+    .nav-flex{
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+      .logo-img{
+        animation: rotation 15s infinite linear;
+        &:hover{
+          animation: none;
+        }
+      }
+
+      a{
+        color: $dark;
+        font-family: 'Lato', sans-serif;
+        font-size: 1rem;
+        text-decoration: none;
+        margin: 0 16px;
+        transition: all 0.3s;
+
+        &:hover{
+          color: $accent;
+        }
+      }
+    }
+  }
+
+  .hero{
+    max-height: 110vh;
+    .evelina{
+      width: 70%;
+      top: -100px;
+    }
+
+    .profile-picture{
+      width: 40%;
+      top: -500px;
+    }
+
+    h1, p, button{
+      top: -250px;
+    }
+
+    h1, p{
+      width: 75%;
+    }
+    p{
+      margin: 50px 0 64px 0;
+    }
+
+    button{
+      margin-right: 32px;
+    }
+  }
+
+  .services{
+    h4{
+      width: 50%;
+      margin-bottom: 64px;
+    }
+  }
+  .coffee-img{
+    width: 40%;
+    height: 600px;
+    top: -300px;
+    object-fit: cover;
+  }
+
+  .portfolio{
+    h2{
+      margin-top: -420px;
+    }
+  }
+
+  .contact{
+    .content{
+      .contact-flex{
+        .div-1{
+          a{
+            width: 300px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
